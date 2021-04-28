@@ -89,7 +89,7 @@ static const char *volumetogglecmd[]  = {"/bin/sh", "-c", "amixer set Master tog
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = bravecmd } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = bravecmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = scrotfullcmd } },
 	{ MODKEY|Mod1Mask,              XK_s,      spawn,          {.v = scrotpartcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
@@ -127,7 +127,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[8]} },
