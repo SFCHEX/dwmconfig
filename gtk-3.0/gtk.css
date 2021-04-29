@@ -1,0 +1,14 @@
+.thunar {
+-gtk-icon-style: regular;
+}
+
+VteTerminal,
+TerminalScreen,
+vte-terminal {
+    padding: 7px 7px 7px 7px;
+    -VteTerminal-inner-border: 7px 7px 7px 7px;
+}
+headerbar {
+        background-color: #323845;
+        
+  }
