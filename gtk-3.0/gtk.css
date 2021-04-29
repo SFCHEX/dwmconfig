@@ -9,11 +9,11 @@ vte-terminal {
     -VteTerminal-inner-border: 7px 7px 7px 7px;
 }
 headerbar {
-        background-color: #323845;
+        background-color:   #373e4d;
         
   }
-@define-color decoration_border_color #323845;
-@define-color decoration_border_color_unfocused #323845;
+@define-color decoration_border_color  #373e4d;
+@define-color decoration_border_color_unfocused  #373e4d;
 
 /* focused window */
 decoration {
