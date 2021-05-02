@@ -77,6 +77,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-h" ,"20", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *tabtermcmd[]  = { "tabbed" ,"-r","2","st", "-w" , NULL };
 static const char *bravecmd[]  = { "brave", NULL };
 
 static const char *scrotpartcmd[]  = { "flameshot","gui", NULL };
@@ -93,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = scrotfullcmd } },
 	{ MODKEY|Mod1Mask,              XK_s,      spawn,          {.v = scrotpartcmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ Mod1Mask,                       XK_Return, spawn,          {.v = tabtermcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = volumetogglecmd } },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = volumeupcmd } },
 	{ MODKEY|ShiftMask,             XK_j,      spawn,          {.v = volumedowncmd } },
@@ -148,7 +150,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,             XK_q,      quit,           {0} },
 };
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
