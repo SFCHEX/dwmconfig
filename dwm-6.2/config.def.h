@@ -85,6 +85,8 @@ static const char *volumeupcmd[]  = { "/bin/sh", "-c","amixer set Master 8%+ ; p
 static const char *volumedowncmd[]  = { "/bin/sh", "-c","amixer set Master 8%- ; pkill -RTMIN+10 dwmblocks",  NULL };
 
 static const char *volumetogglecmd[]  = {"/bin/sh", "-c", "amixer set Master toggle; pkill -RTMIN+10 dwmblocks", NULL };
+/*static const char *switchkeybar[]  = {"setxkbmap", "ar", NULL };
+static const char *switchkeyben[]  = {"setxkbmap", "us", NULL }; */
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -92,6 +94,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,      spawn,          {.v = bravecmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = scrotfullcmd } },
 	{ MODKEY|Mod1Mask,              XK_s,      spawn,          {.v = scrotpartcmd } },
+/*	{ Mod1Mask,                     XK_a,      spawn,          {.v = switchkeybar} },
+	{ Mod1Mask,                     XK_Return, spawn,          {.v = switchkeyben} }, */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = volumetogglecmd } },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = volumeupcmd } },

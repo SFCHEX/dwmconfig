@@ -5,7 +5,7 @@ static const Block blocks[] = {
 	{" Bat:", "acpi | awk  '{print $3 , $4}' | sed 's/,//g'",	30,		0},
 
 	{"Vol:", "awk -F\"[][]\" '/Left:/ { print $2 }' <(amixer sget Master)", 	0,		10},
-	{"", "date '+%b %d (%a) %I:%M%p '",					60,		0},
+	{"", "date '+%I:%M%p (%a) %b %d '",					60,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
