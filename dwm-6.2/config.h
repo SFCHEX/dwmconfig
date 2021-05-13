@@ -88,6 +88,7 @@ static const char *volumetogglecmd[]  = {"/bin/sh", "-c", "amixer set Master tog
 /*static const char *switchkeybar[]  = {"setxkbmap", "ar", NULL };
 static const char *switchkeyben[]  = {"setxkbmap", "us", NULL }; */
 
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -98,8 +99,8 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_Return, spawn,          {.v = switchkeyben} }, */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = volumetogglecmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = volumeupcmd } },
-	{ MODKEY|ShiftMask,             XK_j,      spawn,          {.v = volumedowncmd } },
+	{ MODKEY|ControlMask,           XK_u,      spawn,          {.v = volumeupcmd } },
+	{ MODKEY|ControlMask,           XK_j,      spawn,          {.v = volumedowncmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -138,7 +139,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
+
+	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
