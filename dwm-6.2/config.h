@@ -80,6 +80,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34","-C","#323845@257", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *bravecmd[]  = { "brave", NULL };
+static const char *chromiumcmd[]  = { "chromium", NULL };
 
 static const char *scrotpartcmd[]  = { "flameshot","gui", NULL };
 static const char *scrotfullcmd[]  = { "/bin/sh","-c","flameshot full -p ~/Pictures/screenshots", NULL };
@@ -95,6 +96,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = bravecmd } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = chromiumcmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = scrotfullcmd } },
 	{ MODKEY|Mod1Mask,              XK_s,      spawn,          {.v = scrotpartcmd } },
 /*	{ Mod1Mask,                     XK_a,      spawn,          {.v = switchkeybar} },
