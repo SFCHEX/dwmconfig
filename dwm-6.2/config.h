@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
@@ -20,8 +20,8 @@ static const char col_gray4[]       = "#E5E9F0";
 static const char col_cyan[]        = "#3f4758";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_gray1, "#A3BE8C"},
+	[SchemeSel]  = { col_gray4, col_cyan,  "#A3BE8C"  },
 };
 
 /* tagging */
@@ -35,6 +35,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Pavucontrol",  NULL,   NULL,       0,       1,           -1 },
+	{ "Zathura",  NULL,   NULL,       0,       1,           -1 },
 };
 
 /* layout(s) */
@@ -79,8 +80,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34","-C","#323845@257", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser1cmd[]  = { "firefox", NULL };
-static const char *browser2cmd[]  = { "brave", NULL };
+static const char *browser1cmd[]  = { "brave", NULL };
+static const char *browser2cmd[]  = { "chromium", NULL };
 static const char *browser3cmd[]  = { "firefox-nightly", NULL };
 
 static const char *scrotpartcmd[]  = { "flameshot","gui", NULL };
