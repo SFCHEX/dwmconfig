@@ -3,9 +3,9 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
-static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappih    = 3;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 3;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 3;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -20,7 +20,7 @@ static const char col_gray4[]       = "#E5E9F0";
 static const char col_cyan[]        = "#3f4758";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, "#A3BE8C"},
+	[SchemeNorm] = { col_gray3, col_gray1, "#BF616A"},
 	[SchemeSel]  = { col_gray4, col_cyan,  "#A3BE8C"  },
 };
 
