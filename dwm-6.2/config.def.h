@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int gappih    = 3;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 3;       /* vert inner gap between windows */
+static const unsigned int gappiv    = 2;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 3;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappov    = 3;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -16,12 +16,13 @@ static const char dmenufont[]       = "Jetbrains Mono Medium:size=9";
 static const char col_gray1[]       = "#323845";
 static const char col_gray2[]       = "#3B4252";
 static const char col_gray3[]       = "#D8DEE9";
-static const char col_gray4[]       = "#E5E9F0";
-static const char col_cyan[]        = "#3f4758";
+static const char col_gray4[]       = "#323845";
+static const char col_cyan[]        = "#A3BE8C";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, "#BF616A"},
-	[SchemeSel]  = { col_gray4, col_cyan,  "#A3BE8C"  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray4},
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+
 };
 
 /* tagging */
