@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
-static const unsigned int gappih    = 3;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 2;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 3;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 3;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -18,10 +18,11 @@ static const char col_gray2[]       = "#3B4252";
 static const char col_gray3[]       = "#D8DEE9";
 static const char col_gray4[]       = "#323845";
 static const char col_cyan[]        = "#434c5e";
+static const char col_green[]        = "#A3BE8C";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray4},
-	[SchemeSel]  = { col_gray3, col_cyan,  "#A3BE8C"  },
+	[SchemeSel]  = { col_gray3, col_cyan,  col_green  },
 
 };
 
@@ -77,7 +78,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-h" ,"20", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray3, "-h" ,"20", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34","-C","#323845@257", NULL };
 static const char *termcmd[]  = { "st", NULL };
